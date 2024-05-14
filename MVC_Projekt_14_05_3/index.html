@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h5>Całkowite saldo</h5>
+          <span id="balance">0.00zl</span>
+        </div>
+        <div>
+          <h5>Dochód</h5>
+          <span id="income">0.00zl</span>
+        </div>
+        <div>
+          <h5>Zakupy</h5>
+          <span id="expense">0.00zl</span>
+        </div>
+      </header>
+
+      <section>
+        <h3>Transakcje</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+      <section>
+        <h3>Dodaj transakcję</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Dochód</span>
+                <span>Zakupy</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Nazwa</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Ile</label>
+            <input
+              type="number"
+              name="amount"
+              value="0"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Data</label>
+            <input type="date" name="date" required />
+          </div>
+          <button type="submit">Wysłać</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
